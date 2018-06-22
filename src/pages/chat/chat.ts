@@ -14,7 +14,7 @@ export class ChatPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ChatPage');
+    console.log(this.navParams);
   }
 
   showAlert(title: string, message: string){
@@ -23,12 +23,14 @@ export class ChatPage {
       subTitle: message,
       buttons: ['OK']
     });
-    
+    alert.present();
   }
 
   loginUser() {
     if(/^[a-zA-Z0-9]+$/.test(this.username)){
-
+      this.navCtrl.push(ChatPage, {
+        username : this.username
+      });
     }else{
       this.showAlert("Error", "Invalid UserName");
     }

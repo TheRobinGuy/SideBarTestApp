@@ -7,6 +7,12 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="container">
-  <h3>Welcome to the Home Page!</h3>
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>UserName</ion-label>
+      <ion-input type="text" [(ngModel)]="username"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button block outline (click)="loginUser()">Login</button>
 </ion-content>

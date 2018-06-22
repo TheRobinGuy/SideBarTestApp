@@ -1,17 +1,18 @@
 <ion-header>
-
   <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>Chat</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
-    <ion-item>
-      <ion-label floating>UserName</ion-label>
-      <ion-input type="text" [(ngModel)]="username"></ion-input>
-    </ion-item>
-  </ion-list>
-  <button ion-button block outline (click)="loginUser()">Login</button>
+  <div id="chatMessages"></div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-input type="text" [(ngModel)]="message"></ion-input>
+  </ion-toolbar>
+</ion-footer>
