@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { NavController, NavParams, AlertController } from 'ionic-angular';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Subscription } from 'rxjs';
+import 'rxjs/add/operator/switchMap';
 
-@IonicPage()
 @Component({
   selector: 'page-chat',
   templateUrl: 'chat.html',
@@ -18,7 +18,10 @@ export class ChatPage {
   constructor(public db: AngularFireDatabase, public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
     this.username = this.navParams.get('username');
     this.subscription = this.db.list('/chat').valueChanges().subscribe(data => {
-      this.messages = data;
+      //this.messages = data;
+      data.map((elem)=>{
+        elem = data;
+      });
     });
   };
 
