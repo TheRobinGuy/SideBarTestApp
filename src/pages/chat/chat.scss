@@ -1,3 +1,19 @@
 page-chat {
+    .innerMessage{
+        display: inline-block;
+        padding: .5em .8em;
+        background: color($colors, 'primary');
+        margin: .5em;
+        color: color($colors, 'light');
+        border-radius: 2em;
+    }
 
+    .username{
+        font-size: 80%;
+        font-style: italic;
+    }
+
+    .messageText{
+        font-size: 120%;
+    }
 }
