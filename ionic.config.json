@@ -1,0 +1,8 @@
+{
+  "name": "SideBarTestApp",
+  "app_id": "a5367d3c",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
