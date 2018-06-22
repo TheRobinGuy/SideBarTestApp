@@ -12,7 +12,7 @@ export class ChatPage {
 
   username: string = '';
   message: string = '';
-  subscription;//: Subscription;
+  subscription: Subscription;
   messages: object[] = [];
 
   constructor(public db: AngularFireDatabase, public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {

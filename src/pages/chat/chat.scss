@@ -13,7 +13,21 @@ page-chat {
         font-style: italic;
     }
 
-    .messageText{
+    .message{
         font-size: 120%;
+    }
+
+    .elem button {
+        border-radius: 0;
+        margin: 0;
+    }
+
+    div#footer div.elem:first-child{
+        flex-grow: 1;
+    }
+
+    div#footer{
+        display: flex;
+        flex-direction: row;
     }
 }

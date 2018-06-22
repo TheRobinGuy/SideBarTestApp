@@ -13,16 +13,19 @@
 
 <ion-footer>
   <ion-toolbar>
-    <ion-input type="text" [(ngModel)]="message">
-      <div class="message" *ngFor="let message of messages">
-        <div class="innerMessage">
-          <div class="messageText">{{message.message}}</div>
-          <div class="username">{{message.username}}</div>          
+    <div class="footer">
+      <div class="elem"><ion-input type="text" [(ngModel)]="message">
+        <div class="message" *ngFor="let message of messages">
+          <div class="innerMessage">
+            <div class="message">{{message.message}}</div>
+            <div class="username">{{message.username}}</div>
+          </div>
         </div>
-      </div>
-    </ion-input>
-    <button ion-button icon-only (click)="sendMessage()">
-      <ion-icon name="send"></ion-icon>
-    </button>
+      </ion-input></div>
+      <div class="elem">
+      <button ion-button icon-only (click)="sendMessage()">
+        <ion-icon name="send"></ion-icon>
+      </button></div>
+    </div>
   </ion-toolbar>
 </ion-footer>
